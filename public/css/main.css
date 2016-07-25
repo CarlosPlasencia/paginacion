@@ -3,6 +3,9 @@ body{
 	background-color: #fbf8f8;
 }
 
+.center{padding: 10em}
+
+
 .container{max-width:1200px;margin:0 auto;padding:0 1em}
 .detail__content{background-color:#fff;-webkit-border-radius:2px;border-radius:2px}
 .table{width:100%;border-collapse:collapse}

@@ -62,7 +62,7 @@
 					}
 					
 					if (parseInt('{{num_page}}')>1){
-						$('#paginas').append('<li><a href="/usuarios/page/1" id="1">primera</a></li>');
+						$('#paginas').append('<li><a href="/usuarios/page/1" id="1">Primera</a></li>');
 						$('#paginas').append('<li><a href="/usuarios/page/{{num_page-1}}" id="{{num_page-1}}">ant</a></li>');
 					}
 					for (var i = ini; i <= fin; i++) {
@@ -70,7 +70,7 @@
 					}
 					if (parseInt('{{num_page}}')<parseInt('{{count}}')){
 						$('#paginas').append('<li><a href="/usuarios/page/{{num_page+1}}">sgte</a></li>');
-						$('#paginas').append('<li><a href="/usuarios/page/{{count}}">ultima</a></li>');
+						$('#paginas').append('<li><a href="/usuarios/page/{{count}}">Ultima</a></li>');
 					}	
 					$("#{{num_page}}").addClass("active");
 				});
