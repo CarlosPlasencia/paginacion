@@ -1,0 +1,26 @@
+{
+  "name": "paginacion",
+  "version": "1.0.0",
+  "description": "este es un ejemplo de paginacion",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarlosPlasencia/paginacion.git"
+  },
+  "author": "Carlos Plasencia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarlosPlasencia/paginacion/issues"
+  },
+  "homepage": "https://github.com/CarlosPlasencia/paginacion#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "jquery": "^3.1.0",
+    "mongoose": "^4.5.5",
+    "swig": "^1.4.2"
+  }
+}

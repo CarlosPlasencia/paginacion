@@ -1,0 +1,80 @@
+{% extends "../base.html" %}
+
+{% block titulo %}
+	Paginacion
+{% endblock titulo %}
+
+{% block body %}
+	<center><h1>Usuarios</h1></center> 
+
+	<div class="container">
+       <article class="detail__content">
+				<table class="table">
+					<thead>
+						<tr class="table__head">
+							<td class="table__head__item"><strong>ID</strong></td>
+							<td class="table__head__item"><strong>Usuario</strong></td>
+							<td class="table__head__item"><strong>Email</strong></td>
+						</tr>
+					</thead>
+					<tbody>
+						{% for user in users %}
+						<tr class="table__body">
+							<td>{{ user._id|json_encode|replace('"', '')|replace('"', '') }}</td>
+							<td>{{ user.name }}</td>
+							<td>{{ user.email }}</td>
+						</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</article>
+			<article>
+												
+				<section class="paginacion">
+					<ul>
+						<div id="paginas">
+						</div>			
+					</ul>
+				</section>
+			</article>
+	</div>
+			<script>
+
+				$(document).ready(function(){	
+					let ini=0,fin=0,pages=[];
+					console.log('hola');
+					console.log('{{count}}');
+					if(parseInt('{{num_page}}')<=5){
+						ini=1;
+						if(parseInt('{{count}}')<9)
+							fin=parseInt('{{count}}');
+						else
+							fin=9;
+					}else if(parseInt('{{num_page}}')>=parseInt('{{count}}')-4){
+						if(parseInt('{{count}}')<=9)
+							ini=1;
+						else
+							ini=parseInt('{{count}}')-9;
+						fin=parseInt('{{count}}');
+					}else{
+						ini = parseInt('{{num_page}}')-4;
+						fin = parseInt('{{num_page}}')+4;
+					}
+					
+					if (parseInt('{{num_page}}')>1){
+						$('#paginas').append('<li><a href="/usuarios/page/1" id="1">primera</a></li>');
+						$('#paginas').append('<li><a href="/usuarios/page/{{num_page-1}}" id="{{num_page-1}}">ant</a></li>');
+					}
+					for (var i = ini; i <= fin; i++) {
+					 		$('#paginas').append('<li><a href="/usuarios/page/'+i+'/" id="'+i+'">'+i+'</a></li>');
+					}
+					if (parseInt('{{num_page}}')<parseInt('{{count}}')){
+						$('#paginas').append('<li><a href="/usuarios/page/{{num_page+1}}">sgte</a></li>');
+						$('#paginas').append('<li><a href="/usuarios/page/{{count}}">ultima</a></li>');
+					}	
+					$("#{{num_page}}").addClass("active");
+				});
+			</script>
+
+{% endblock body %}
+      

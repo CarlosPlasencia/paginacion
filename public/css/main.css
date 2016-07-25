@@ -1,0 +1,24 @@
+
+body{
+	background-color: #fbf8f8;
+}
+
+.container{max-width:1200px;margin:0 auto;padding:0 1em}
+.detail__content{background-color:#fff;-webkit-border-radius:2px;border-radius:2px}
+.table{width:100%;border-collapse:collapse}
+.table__head{background-image:-webkit-linear-gradient(270deg, #cecbcb, #d8d8d8);background-image:-moz-linear-gradient(270deg, #cecbcb, #d8d8d8);background-image:-o-linear-gradient(270deg, #cecbcb, #d8d8d8);background-image:-ms-linear-gradient(270deg, #cecbcb, #d8d8d8);background-image:linear-gradient(180deg, #cecbcb, #d8d8d8);text-align:center}
+.table__head__item{padding:.5rem 0;}
+.table__head__item strong{color:#000}
+.table__body{border:1px solid #d9dde1;text-align:center;}
+.table__body td{padding:.8rem 0;width:20%;color:#000;}
+.table__body td.active{font-weight:400;cursor:pointer;}
+.table__body td.active:hover{-webkit-transform:scale(1.1);-moz-transform:scale(1.1);-o-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1);color:#108eff}
+.table__body select{color:#000;width:150px}
+
+.paginacion{margin:20px 0;}
+.paginacion ul{list-style:none;text-align:center;}
+.paginacion ul li{display:inline-block;margin-right:10px;}
+.paginacion ul li a{display:block;padding:10px 20px;color:#fff;background:#024959;text-decoration:none}
+.paginacion ul li a:hover{background:#037e8c}
+.paginacion ul li .active{background:#037e8c;font-weight:bold}
+
